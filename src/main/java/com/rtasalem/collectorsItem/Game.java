@@ -269,10 +269,10 @@ public class Game {
 		choice2.setText("Inspect glasses");
 
 		storyTextArea.setText(
-				"Donald and Sarah are speaking beside you. You start walking down the alleyway where the body was found. "
-						+ "\nAt the end of the alleyway, something small shines. You make your way. "
-						+ "\nThere's a crunch beneath your boot. You look down and it's a pair of glasses. You look behind you to see if someone saw. "
-						+ "\nYou approach the shining object and notice it's a necklace. It's one she wore everyday...");
+				"Donald and Sarah are speaking beside you. You start walking down the alleyway where the body was "
+				+ "\nfound. At the end of the alleyway, something small shines. You make your way. "
+						+ "\nThere's a crunch beneath your boot. You look down and it's a pair of glasses. You look behind you to "
+						+ "\nsee if someone saw. You approach the shining object and notice it's a necklace. It's one she wore everyday...");
 
 	}
 
@@ -284,8 +284,8 @@ public class Game {
 		choice2.setVisible(false);
 
 		storyTextArea.setText(
-				"Sarah: Find anything? \n\nYou're fist, which is tucked inside your coat pocket, clenches tightly around the necklace. The chain is cold in your hand. "
-						+ "\n\nTom: Broken glasses, few metres back. \nSarah calls one of the CSIs to take a look. You walk back to where you left Donald.");
+				"Sarah: Find anything? \n\nYou're fist, which is tucked inside your coat pocket, clenches tightly around the necklace. The chain is "
+				+ "\ncold in your hand. \n\nTom: Broken glasses, few metres back. \nSarah calls one of the CSIs to take a look. You walk back to where you left Donald.");
 
 		inventory = inventory + 1;
 		inventoryLabelCount.setText("" + inventory);
@@ -324,7 +324,7 @@ public class Game {
 				"You, Sarah, and Donald each stand a few metres away from the 3rd body. The team of CSIs are already setting up. "
 						+ "\nSarah walks over to speak to one of them, leaving you and Donald behind. "
 						+ "\nAfter a few moments, Donald moves to join Sarah. \nYou make you're way upstairs. Th body was found in the living room. "
-						+ "\nHer room is as you remember, from the posters on the wall to the position of the makeup on the dressing table.");
+						+ "\nHer room is as you remember, from the posters on the wall to the position of the makeup on the \ndressing table.");
 
 	}
 
@@ -336,7 +336,7 @@ public class Game {
 		choice2.setVisible(false);
 
 		storyTextArea.setText(
-				"Your coat pockets are startig to weigh down. You adjust you coat so it doesn't look too obvious."
+				"Your coat pockets are starting to weigh down. You adjust you coat so it doesn't look too obvious."
 						+ "\n\nYou make your way back downstairs.");
 
 		inventory = inventory + 1;
