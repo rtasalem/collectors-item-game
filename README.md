@@ -11,3 +11,4 @@ Will the truth come out?
 This project utilises the Swing library (javax.swing) to make use of the following GUI (graphical user interface) components: JFrame, JPanel, JLabel, JButton, and JTextArea.
 ## Getting Started
 After cloning the repository, simply run the Game.java file to begin playing the game.
+### P.S. Forgot to add a .gitignore
