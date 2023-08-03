@@ -91,7 +91,7 @@ public class Game {
 		storyTextPanel.setBackground(Color.black);
 		storyTextArea = new JTextArea("The date is 22nd July 2023. \n\nYou are Detective Sergeant (D.S.) Thomas Doyle. "
 				+ "\n\nThe time is 03:45am, you have just arrived home and have gotten into bed. "
-				+ "You wanted to sleep right away so no one would notice the lack of sleep you've been getting, D.C. Williamson has already caught on.");
+				+ "You wanted to sleep right \naway so no one would notice the lack of sleep you've been getting. D.C. Williamson has already caught on.");
 		storyTextArea.setBounds(200, 200, 1250, 250);
 		storyTextArea.setBackground(Color.black);
 		storyTextArea.setForeground(Color.white);
@@ -272,7 +272,7 @@ public class Game {
 				"Donald and Sarah are speaking beside you. You start walking down the alleyway where the body was "
 				+ "\nfound. At the end of the alleyway, something small shines. You make your way. "
 						+ "\nThere's a crunch beneath your boot. You look down and it's a pair of glasses. You look behind you to "
-						+ "\nsee if someone saw. You approach the shining object and notice it's a necklace. It's one she wore everyday...");
+						+ "\nsee if someone saw. You approach the shining object and notice it's a necklace. It's one she wore \neveryday...");
 
 	}
 
@@ -301,7 +301,7 @@ public class Game {
 		choice2.setText(">>>");
 
 		storyTextArea.setText(
-				"Sarah: Tom, is everything alright? \nYou didn't get to inspect the necklace. Sarah saw the glasses as soon as she stopped to stand beside you. "
+				"Sarah: Tom, is everything alright? \nYou didn't get to inspect the necklace. Sarah saw the glasses as soon as she stopped to stand beside \nyou. "
 						+ "\nTom: Broken glasses, might be the girl's?"
 						+ "\nSarah looks down, quickly turns back to the team of CSIs and calls one over to collect the glasses in an evidence bag."
 						+ "\nYou both walk back to where you left Donald. The necklace remains shining on the ground.");
@@ -323,7 +323,7 @@ public class Game {
 		storyTextArea.setText(
 				"You, Sarah, and Donald each stand a few metres away from the 3rd body. The team of CSIs are already setting up. "
 						+ "\nSarah walks over to speak to one of them, leaving you and Donald behind. "
-						+ "\nAfter a few moments, Donald moves to join Sarah. \nYou make you're way upstairs. Th body was found in the living room. "
+						+ "\nAfter a few moments, Donald moves to join Sarah. \nYou make you're way upstairs. The body was found in the living room. "
 						+ "\nHer room is as you remember, from the posters on the wall to the position of the makeup on the \ndressing table.");
 
 	}
@@ -432,9 +432,10 @@ public class Game {
 		choice2.setText(".......");
 
 		storyTextArea.setText(
-				"Thomas Doyle hangs up his coat, his left hand carrying the contents of his pockets. He walks over to his bookshelf "
-						+ "\nand carefully places each item side by side. Some of the other items displayed include earrings, arcade tokens, and a shoelace. "
-						+ "\nOnce all the items are place in a straight line, Thomas get's into bed and sleeps for the first time in forty-eight hours.");
+				"Thomas Doyle hangs up his coat, his left hand carrying the contents of his pockets. He walks over to "
+				+ "\nhis bookshelf and carefully places each item side by side. Some of the other items displayed include "
+				+ "\nearrings, arcade tokens, and a shoelace. Once all the items are place in a straight line, Thomas get's "
+				+ "\ninto bed and sleeps for the first time in forty-eight hours.");
 
 	}
 
