@@ -1,8 +1,8 @@
 # Collector's Item: A Text-based Game
-### Background
-This is the first game I ever made. 
 ### Acknowledgements
 Credit and thanks to [RyiSnow on YouTube](https://www.youtube.com/@RyiSnow) for their tutorial on [_How to Make a Text Adventure with GUI in Java_](https://www.youtube.com/playlist?list=PL_QPQmz5C6WUMB0xEMZosWbyQo_Kil0Fb). This tutorial was used as the main reference for building _Collector's Item_.
+## Background
+This is the first game I ever made. 
 ## About the Game
 You are D.S. Thomas Doyle. After arriving home late one night, your phone begins to ring.
 Multiple homicides, all having taken place within the last 2 hours, all with the same M.O.
