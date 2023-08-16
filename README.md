@@ -1,7 +1,7 @@
 # Collector's Item: A Text-based Game
 ### Project Status: COMPLETE
 ### Acknowledgements
-Credit and thanks to [RyiSnow on YouTube](https://www.youtube.com/@RyiSnow) for their tutorial on [_How to Make a Text Adventure with GUI in Java_](https://www.youtube.com/playlist?list=PL_QPQmz5C6WUMB0xEMZosWbyQo_Kil0Fb). This tutorial was used as the main reference for building _Collector's Item_.
+Credit and thanks to [RyiSnow on YouTube](https://www.youtube.com/@RyiSnow) for their tutorial on [_How to Make a Text Adventure Game with GUI in Java_](https://www.youtube.com/playlist?list=PL_QPQmz5C6WUMB0xEMZosWbyQo_Kil0Fb). This tutorial was used as the main reference for building _Collector's Item_.
 ## Background
 This is the first game I ever made. 
 ## About the Game
