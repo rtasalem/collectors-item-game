@@ -14,6 +14,6 @@ Will the truth come out?
 ## Documentation
 The only form of documentation applied to this project is comments that can be found in the Game.java file. These explain the code itself and how it serves to develop the game's plot.
 ## Learning Milestones
-From this project I learned how to use GUI components in Java to create a text-based game. A core feature of the game is that the player is presented with multiple choices and small changes in the game's progression are dependant on these choices. There are also two different endings that a player can achieve while playing the game.
+From this project I learned how to use GUI components in Java to create a text-based game in a completely separate window as opposed to only wokring within the IDE's console. A core feature of the game is that the player is presented with multiple choices and small changes in the game's progression are dependant on these choices. This was achieved using switch cases and setting action commands on the different choices that the player is presented during gameplay. There are also two different endings (the good ending and the alternate bad ending) that a player can achieve based on their choices.
 ## Getting Started
 After cloning the repository, run the Game.java file to begin playing _Collector's Item_.
