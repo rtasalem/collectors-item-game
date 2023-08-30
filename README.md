@@ -11,6 +11,8 @@ You are constantly faced with different choices, which shape how the killer is r
 Will the truth come out?
 ## Libraries & Technologies
 - This project utilises the Swing library (javax.swing) to make use of GUI (graphical user interface) components including JFrame, JPanel, JLabel, JButton, and JTextArea.
+## Documentation
+The only form of documentation applied to this project is comments that can be found in the Game.java file. These explain the code itself and how it serves to develop the game's plot.
 ## Learning Milestones
 From this project I learned how to use GUI components in Java to create a text-based game. A core feature of the game is that the player is presented with multiple choices and small changes in the game's progression are dependant on these choices. There are also two different endings that a player can achieve while playing the game.
 ## Getting Started
