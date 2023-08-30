@@ -15,29 +15,38 @@ import javax.swing.JTextArea;
 
 public class Game {
 
+	// GUI components
 	JFrame window;
 	Container container;
 	JPanel titlePanel, authorPanel, startContinueButtonPanel, storyTextPanel, choiceButtonPanel, inventoryPanel;
 	JLabel titleLabel, authorLabel, inventoryLabel, inventoryLabelCount;
 	JButton startContinueButton, choice1, choice2;
 	JTextArea storyTextArea;
+	
+	// Fonts
 	Font titleFont = new Font("Times New Roman", Font.ITALIC, 100);
 	Font normalFont = new Font("Times New Roman", Font.PLAIN, 30);
-	String position;
-	int inventory;
+	
+	// Game state variables
+	String position; // Current position in the story
+	int inventory; // Number of items collected 
 
+	// Event handlers
 	TitleScreenHandler titleScreenHandler = new TitleScreenHandler();
 	GameIntroHandler gameIntroHandler = new GameIntroHandler();
 	ChoiceHandler choiceHandler = new ChoiceHandler();
 
+	// Entry point
 	public static void main(String[] args) {
 
 		new Game();
 
 	}
-
+ 
+	// Constructor
 	public Game() {
 
+		// Initialisation of window and GUI components
 		window = new JFrame();
 		window.setSize(1440, 875);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -72,20 +81,25 @@ public class Game {
 		authorPanel.add(authorLabel);
 		startContinueButtonPanel.add(startContinueButton);
 
+		// Addition of components to the container
 		container.add(titlePanel);
 		container.add(authorPanel);
 		container.add(startContinueButtonPanel);
 
+		// Window set to visible 
 		window.setVisible(true);
 
 	}
 
+	// Handles the game introduction
 	public void gameIntro() {
 
+		// Previous panels from the Game() constructor are now hidden
 		titlePanel.setVisible(false);
 		authorPanel.setVisible(false);
 		startContinueButtonPanel.setVisible(false);
 
+		// Set up of the story text panel
 		storyTextPanel = new JPanel();
 		storyTextPanel.setBounds(100, 100, 1250, 250);
 		storyTextPanel.setBackground(Color.black);
@@ -99,6 +113,7 @@ public class Game {
 		storyTextArea.setLineWrap(true);
 		storyTextPanel.add(storyTextArea);
 
+		// Set up of the continue button (button text reads CONTINUE, was previously START)
 		startContinueButtonPanel = new JPanel();
 		startContinueButtonPanel.setBounds(630, 500, 200, 100);
 		startContinueButtonPanel.setBackground(Color.black);
@@ -107,18 +122,26 @@ public class Game {
 
 		startContinueButtonPanel.add(startContinueButton);
 
+		// Addition of components to the container
 		container.add(storyTextPanel);
 		container.add(startContinueButtonPanel);
 
 	}
 
+	/**
+	 * Displays the prologue section of the game.
+	 * Sets up the story text and choice buttons for the player to make a decision between 2 choices.
+	 */
 	public void prologue() {
 
+		// Setting position to be used later on in switch cases
 		position = "prologue";
 
+		// Hiding previous panels to now show the prologue section
 		storyTextPanel.setVisible(false);
 		startContinueButtonPanel.setVisible(false);
 
+		// Story set up accomplished using JTextArea
 		storyTextArea.setText("You're phone begins to ring. "
 				+ "\n\nYou ignore the first 2 calls, knowing that it's Sarah. "
 				+ "\n\nYou worry that if you answered the phone on the first call, she would later realise you had been awake so late.");
@@ -129,44 +152,59 @@ public class Game {
 		storyTextArea.setLineWrap(true);
 		storyTextPanel.add(storyTextArea);
 
+		// Set up of the choice button panel
 		choiceButtonPanel = new JPanel();
 		choiceButtonPanel.setBounds(575, 475, 300, 100);
 		choiceButtonPanel.setBackground(Color.black);
 
+		// Creation and set up of the first choice button
 		choice1 = new JButton("Answer the phone");
 		choice1.setForeground(Color.black);
 		choice1.setFont(normalFont);
 		choice1.setFocusPainted(false);
 		choice1.addActionListener(choiceHandler);
-		choice1.setActionCommand("c1");
+		choice1.setActionCommand("c1"); // Setting the action command for this choice to be used later on in switch cases
 		choiceButtonPanel.add(choice1);
 
+		// Creation and set up of the second choice button
 		choice2 = new JButton("Miss another call");
 		choice2.setForeground(Color.black);
 		choice2.setFont(normalFont);
 		choice2.setFocusPainted(false);
 		choice2.addActionListener(choiceHandler);
-		choice2.setActionCommand("c2");
+		choice2.setActionCommand("c2"); // Setting the action command for this choice to be used later on in switch cases
 		choiceButtonPanel.add(choice2);
 
+		// Addition of components to the container
 		container.add(storyTextArea);
 		container.add(choiceButtonPanel);
 
 	}
 
+	/**
+	 * Handles the story progression when the player chooses to answer the phone (c1).
+	 * Updates the position, modifies choice buttons, and displays relevant story text.
+	 */
 	public void answerPhone() {
 
+		// Position updated to "answerPhone"
 		position = "answerPhone";
 
+		// Changed text of the first choice button and hid the second choice button
 		choice1.setText(">");
 		choice2.setVisible(false);
 
+		// Set up of the story text displayed when after choosing to answer the phone
 		storyTextArea.setText("Sarah: Tom, sorry. I know it's late. " + "\nTom: It's fine, what's happened? "
 				+ "\nSarah: Three bodies found within a 5 mile radius, all appear to have the same M.O. "
 				+ "\nTom: Three? \nYou're confused. That's not quite right. \nTom: I'm on my way.");
 
 	}
 
+	/**
+	 * Handles the story progression when the player chooses to miss another call.
+	 * Updates the position, modifies the choice buttons, and displays the relevant story text.
+	 */
 	public void missedCall() {
 
 		position = "missedCall";
@@ -180,6 +218,10 @@ public class Game {
 
 	}
 
+	/**
+	 * Handles the story progression and setup for Chapter One.
+	 * Displays story text, sets up choice buttons, and initialises the inventory panel.
+	 */
 	public void chapterOne() {
 
 		position = "chapterOne";
@@ -195,6 +237,7 @@ public class Game {
 						+ "\nYou look around to see where everyone else is before looking back down. "
 						+ "\nYour eyes move between the two items hidden in the grass...");
 
+		// Set up of the inventory panel with labels and initial count
 		inventoryPanel = new JPanel();
 		inventoryPanel.setBounds(100, 10, 600, 50);
 		inventoryPanel.setBackground(Color.black);
@@ -209,17 +252,26 @@ public class Game {
 		inventoryLabelCount.setForeground(Color.blue);
 		inventoryPanel.add(inventoryLabelCount);
 
+		// Initialisation of the inventory count using the inventorySetup() method
 		inventorySetup();
 
 	}
 
+	/**
+	 * Initialises the inventory count and updates the inventory label.
+	 */
 	public void inventorySetup() {
 
-		inventory = 0;
-		inventoryLabelCount.setText("" + inventory);
+		inventory = 0; // Initialising the inventory count to 0
+		inventoryLabelCount.setText("" + inventory); // Update the inventory label text with the initial count
 
 	}
 
+	/**
+	 * Handles the story progression when the player chooses to inspect the hair clip.
+	 * Updates the position, modifies choice buttons, displays relevant story text,
+	 * increments the inventory count, and updates the inventory label.
+	 */
 	public void inspectHairClip() {
 
 		position = "inspectHairClip";
@@ -235,11 +287,17 @@ public class Game {
 						+ "\nSarah: We should make our way to the next location. I think Donald could use our help. "
 						+ "\nTom: I'll drive.");
 
+		// Increments the inventory count and updates the inventory label
 		inventory = inventory + 1;
 		inventoryLabelCount.setText("" + inventory);
 
 	}
 
+	/**
+	 * Handles the story progression when the player chooses to inspect the lip gloss.
+	 * Updates the position, modifies choice buttons, displays relevant story text,
+	 * increments the inventory count, and updates the inventory label.
+	 */
 	public void inspectLipGloss() {
 
 		position = "inspectLipGloss";
@@ -254,11 +312,13 @@ public class Game {
 				+ "\nSarah: Going off statistics I suppose."
 				+ "\nYou shrug in agreement. The rest of the drive continues in silence.");
 
+		// Increments the inventory count and updates the inventory label
 		inventory = inventory + 1;
 		inventoryLabelCount.setText("" + inventory);
 
 	}
 
+	// See comments on Chapter One.
 	public void chapterTwo() {
 
 		position = "chapterTwo";
@@ -276,6 +336,7 @@ public class Game {
 
 	}
 
+	// See comments on inspectHairClip() and inspectLipGloss().
 	public void inspectNecklace() {
 
 		position = "inspectNecklace";
@@ -292,6 +353,7 @@ public class Game {
 
 	}
 
+	// See comments on inspectHairClip() and inspectLipGloss().
 	public void inspectGlasses() {
 
 		position = "inspectGlasses";
@@ -311,6 +373,7 @@ public class Game {
 
 	}
 
+	// See comments on Chapter One.
 	public void chapterThree() {
 
 		position = "chapterThree";
@@ -328,6 +391,7 @@ public class Game {
 
 	}
 
+	// See comments on inspectHairClip() and inspectLipGloss().
 	public void inspectKeys() {
 
 		position = "inspectKeys";
@@ -344,6 +408,7 @@ public class Game {
 
 	}
 
+	// See comments on inspectHairClip() and inspectLipGloss().
 	public void inspectHeadband() {
 
 		position = "inspectHeadband";
@@ -359,14 +424,21 @@ public class Game {
 
 	}
 
+	/**
+	 * Handles the story progression and setup for the first part of the epilogue.
+	 * Displays story text, sets up a choice button, and updates the position.
+	 */
 	public void epiloguePartOne() {
 
+		// Updates the current position in the story to "epiloguePt1"
 		position = "epiloguePt1";
 
+		// Choice button which progresses the player through the epilogue
 		choice1.setVisible(true);
 		choice1.setText("...");
 		choice2.setVisible(false);
 
+		// Set up of the story text for the first part of the epilogue
 		storyTextArea.setText(
 				"Donald and Sarah sit opposite you in the booth. \nSarah had asked one the drive back to the station if you wanted to grab something to eat. "
 						+ "\nYou agreed. \nWhat you didn't expect was for her and Donald to be sat together in the booth at the back of the cafe. "
@@ -374,6 +446,7 @@ public class Game {
 
 	}
 
+	// See comments on epiloguePartOne().
 	public void epiloguePartTwo() {
 
 		position = "epiloguePt2";
@@ -389,6 +462,7 @@ public class Game {
 
 	}
 
+	// See comments on epiloguePartOne().
 	public void epiloguePartThree() {
 
 		position = "epiloguePt3";
@@ -403,6 +477,10 @@ public class Game {
 
 	}
 
+	/**
+	 * Handles the story progression and setup for the fourth part of the epilogue.
+	 * Displays story text, sets up a choice button, updates the position, and resets the inventory.
+	 */
 	public void epiloguePartFour() {
 
 		position = "epiloguePt4";
@@ -416,6 +494,12 @@ public class Game {
 						+ "comes round the cafe table to stand directly beside you. \nYou are pulled up from your seat, your hands are brought behind your back, and then "
 						+ "\nyou feel the air against your face as they lead you outside. There's hand on your head as you made to \nget inside Sarah's car, then the thud of the door closing shut.");
 
+		/**
+		 * This is where Thomas Doyle is caught for his crimes. The resetting of the inventory count to 0 occurs
+		 * to represent the physical action of Thomas taking out the items from his pocket, confirming he is the 
+		 * killer the police are looking for. 
+		 * Resets the inventory count to 0 and update the inventory labels' colours.
+		 */
 		inventory = 0;
 		inventoryLabelCount.setText("" + inventory);
 		inventoryLabel.setForeground(Color.red);
@@ -423,6 +507,10 @@ public class Game {
 
 	}
 
+	/**
+	 * Handles the story progression and setup for an alternate bad ending.
+	 * Displays story text, sets up a choice button, and updates the position.
+	 */
 	public void alternateBadEnding() {
 
 		position = "alternateBadEnding";
@@ -439,14 +527,20 @@ public class Game {
 
 	}
 
+	/**
+	 * Handles the story progression and setup for the game outro.
+	 * Manages the visibility of various panels to display the end of the game.
+	 */
 	public void gameOutro() {
 
 		position = "gameOutro";
 
+		// Unnecessary panels are now hidden in the game outro
 		inventoryPanel.setVisible(false);
 		choiceButtonPanel.setVisible(false);
 		startContinueButtonPanel.setVisible(false);
 
+		// Show the title panel with appropriate text and font
 		titlePanel.setVisible(true);
 		titlePanel.setBounds(10, 100, 1400, 500);
 		titleLabel.setText("T H E   E N D");
@@ -455,6 +549,10 @@ public class Game {
 
 	}
 
+	/**
+	 * ActionListener implementation for handling the action event of the title screen.
+	 * Initiates the game introduction when triggered.
+	 */
 	public class TitleScreenHandler implements ActionListener {
 
 		public void actionPerformed(ActionEvent event) {
@@ -465,6 +563,10 @@ public class Game {
 
 	}
 
+	/**
+	 * ActionListener implementation for handling the action event of the game introduction.
+	 * Starts the prologue section of the game when triggered.
+	 */
 	public class GameIntroHandler implements ActionListener {
 
 		public void actionPerformed(ActionEvent event) {
@@ -475,12 +577,18 @@ public class Game {
 
 	}
 
+	/**
+	 * ActionListener implementation for handling player choices in the game.
+	 * Manages the progression of the story based on the player's choices.
+	 */
 	public class ChoiceHandler implements ActionListener {
 
 		public void actionPerformed(ActionEvent event) {
 
+			// Retrieves the player's choice from the action command
 			String playerChoice = event.getActionCommand();
 
+			// Handles the player's choices based on their position within the story.
 			switch (position) {
 			case "prologue":
 				switch (playerChoice) {
