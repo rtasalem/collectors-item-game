@@ -12,6 +12,7 @@ As D.S., you must attend each crime scene and search for clues that might expose
 You are constantly faced with different choices, which shape how the killer is revealed.
 Will the truth come out?
 ## Libraries & Technologies
+**Swing:**
 - This project utilises the Swing library (javax.swing) to make use of GUI (graphical user interface) components including JFrame, JPanel, JLabel, JButton, and JTextArea.
 ## Documentation
 The documentation applied to this project is comments that can be found in the Game.java file. These comments explain how the game plot is developed through giving the player two choices to make throughout each of the chapters.
