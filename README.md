@@ -14,7 +14,7 @@ Will the truth come out?
 ## Libraries & Technologies
 - This project utilises the Swing library (javax.swing) to make use of GUI (graphical user interface) components including JFrame, JPanel, JLabel, JButton, and JTextArea.
 ## Documentation
-The only form of documentation applied to this project is comments that can be found in the Game.java file. These explain the code itself and how it serves to develop the game's plot.
+The documentation applied to this project is comments that can be found in the Game.java file. These comments explain how the game plot is developed through giving the player two choices to make throughout the chapters.
 ## Learning Milestones
 - From this project I learned how to use GUI components in Java to create a text-based game in a completely separate window as opposed to only wokring within the IDE's console.
 - A core feature of the game is that the player is presented with multiple choices and small changes in the game's progression are dependant on these choices. This was achieved using switch cases and setting action commands on the different choices that the player is presented during gameplay.
