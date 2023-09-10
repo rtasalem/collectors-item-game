@@ -2,7 +2,7 @@
 ### Acknowledgements
 Credit and thanks to [RyiSnow on YouTube](https://www.youtube.com/@RyiSnow) for their tutorial on [_How to Make a Text Adventure Game with GUI in Java_](https://www.youtube.com/playlist?list=PL_QPQmz5C6WUMB0xEMZosWbyQo_Kil0Fb). This tutorial was used as the main reference for building _Collector's Item_.
 ## Background
-This is the first game I ever made: a simple text-based murdery mystery.  
+This is the first game I ever made: a text-based murdery mystery.  
 
 **Synopsis:**
 
@@ -17,7 +17,7 @@ Will the truth come out?
 ## Documentation
 The documentation applied to this project is comments that can be found in the Game.java file. These comments explain how the game plot is developed through giving the player two choices to make throughout each of the chapters.
 ## Learning Milestones
-- From this project I learned how to use GUI components in Java to create a text-based game in a completely separate window as opposed to only wokring within the IDE's console.
-- A core feature of the game is that the player is presented with multiple choices and small changes in the game's progression are dependant on these choices. This was achieved using switch cases and setting action commands on the different choices that the player is presented during gameplay.
+- From this project I learned how to use GUI components in Java to create a text-based game in its own dedicated window.
+- A core feature of the game is that the player is presented with multiple choices which cause small changes in the game's progression (e.g. in the plot and dialogue). This was achieved using switch cases and setting action commands on the different choices that the player is presented with during gameplay.
 ## Getting Started
 After cloning the repository, run the Game.java file to begin playing _Collector's Item_.
